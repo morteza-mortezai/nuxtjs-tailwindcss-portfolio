@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import { mapState } from "vuex";
 export default {
   data: () => {
@@ -14,7 +14,7 @@ export default {
 
 <template>
   <!-- About clients section -->
-  <div class="mt-10 sm:mt-20">
+<div class="mt-10 sm:mt-20">
     <p
       class="
         font-general-medium
@@ -34,4 +34,4 @@ export default {
       />
     </div>
   </div>
-</template>
+</template> -->

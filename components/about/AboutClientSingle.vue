@@ -10,12 +10,9 @@ export default {
 </script>
 
 <template>
-  <!-- About single client -->
+  About single client
   <div>
-    <img
-      :src="client.img"
-      :alt="client.title"
-      class="
+    <img :src="client.img" :alt="client.title" class="
         w-64
         py-5
         px-10
@@ -26,8 +23,7 @@ export default {
         mb-8
         cursor-pointer
         dark:bg-secondary-light
-      "
-    />
+      " />
   </div>
 </template>
 

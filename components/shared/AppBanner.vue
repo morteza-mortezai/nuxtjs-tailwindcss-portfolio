@@ -39,7 +39,7 @@ export default {
           dark:text-primary-light
           uppercase
         ">
-        Hi, Iam Stoman
+        Hi, I am Morteza
       </h1>
       <p class="
           font-general-medium
@@ -52,7 +52,7 @@ export default {
           leading-none
           text-gray-400
         ">
-        A Full-Stack Developer & Design Enthusiast
+        A Full-Stack JavaScript Developer
       </p>
       <div class="flex justify-center sm:block">
         <a href="/Stoman-Resume.pdf" download="" class="

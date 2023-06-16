@@ -9,15 +9,14 @@ export default {
 
 <template>
   <div class="container mx-auto">
+
     <AppBanner />
 
     <ProjectsGrid />
 
     <!-- View more projects button -->
     <div class="mt-5 sm:mt-14 flex justify-center">
-      <NuxtLink
-        to="/projects"
-        class="
+      <NuxtLink to="/projects" class="
           font-general-medium
           flex
           items-center
@@ -32,9 +31,7 @@ export default {
           text-white text-lg
           sm:text-xl
           duration-300
-        "
-        aria-label="More Projects"
-      >
+        " aria-label="More Projects">
         <Button title="More Projects" />
       </NuxtLink>
     </div>

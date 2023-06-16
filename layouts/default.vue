@@ -1,21 +1,18 @@
 <template>
-  <div
-    class="bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col"
-  >
+  <div class="bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col">
     <!-- App header -->
     <AppHeader />
 
     <!-- Render contents with transition -->
     <transition name="fade" mode="out-in">
-      <Nuxt />
+      <slot />
     </transition>
 
     <!-- App footer -->
     <AppFooter />
 
     <!-- Go back to top when scrolled down -->
-    <div
-      class="
+    <div class="
         flex
         space-x-2
         mr-8
@@ -26,8 +23,7 @@
         fixed
         items-center
         sm:space-x-4
-      "
-    >
+      ">
       <BackToTop />
     </div>
   </div>

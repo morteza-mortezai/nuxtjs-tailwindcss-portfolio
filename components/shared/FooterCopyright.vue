@@ -1,5 +1,5 @@
 <script>
-import { mapState } from "vuex";
+// import { mapState } from "vuex";
 
 export default {
   data: () => {
@@ -8,38 +8,28 @@ export default {
       author: "Stoman",
     };
   },
-  computed: {
-    ...mapState(["copyrightDate"]),
-  },
+  // computed: {
+  //   ...mapState(["copyrightDate"]),
+  // },
 };
 </script>
 
 <template>
   <div class="flex justify-center items-center text-center">
-    <div
-      class="
+    <div class="
         font-general-regular
         text-lg text-ternary-dark
         dark:text-ternary-light
-      "
-    >
+      ">
       &copy; {{ copyrightDate }}.
-      <a
-        href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
-        target="__blank"
-        class="
+      <a href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio" target="__blank" class="
           font-general-medium
           hover:underline hover:text-indigo-600
           dark:hover:text-indigo-300
           duration-500
-        "
-        >{{ projectName }}</a
-      >
+        ">{{ projectName }}</a>
       . Developed by
-      <a
-        href="https://stoman.me"
-        target="__blank"
-        class="
+      <a href="https://stoman.me" target="__blank" class="
           font-general-medium
           text-secondary-dark
           dark:text-secondary-light
@@ -47,9 +37,7 @@ export default {
           hover:underline hover:text-indigo-600
           dark:hover:text-indigo-300
           duration-500
-        "
-        >{{ author }}</a
-      >
+        ">{{ author }}</a>
     </div>
   </div>
 </template>

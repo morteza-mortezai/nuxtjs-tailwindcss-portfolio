@@ -1,42 +1,15 @@
-<script>
-// import { mapState } from "vuex";
+<script setup >
+import { computed } from 'vue'
+import { useAppStore } from '@/store/index'
 import feather from "feather-icons";
+const selectedProject = ref('')
+const searchProject = ref('')
+const appStore = useAppStore()
 
-export default {
-  data: () => {
-    return {
-      selectedProject: "",
-      searchProject: "",
-    };
-  },
-  computed: {
-    // ...mapState(["projectsHeading", "projectsDescription", "projects"]),
-    // filteredProjects() {
-    //   if (this.selectedProject) {
-    //     return this.filterProjectsByCategory();
-    //   } else if (this.searchProject) {
-    //     return this.filterProjectsBySearch();
-    //   }
-    //   return this.projects;
-    // },
-  },
-  methods: {
-    // filterProjectsByCategory() {
-    //   return this.projects.filter((item) => {
-    //     let category =
-    //       item.category.charAt(0).toUpperCase() + item.category.slice(1);
-    //     return category.includes(this.selectedProject);
-    //   });
-    // },
-    // filterProjectsBySearch() {
-    //   let project = new RegExp(this.searchProject, "i");
-    //   return this.projects.filter((el) => el.title.match(project));
-    // },
-  },
-  mounted() {
-    feather.replace();
-  },
-};
+const projectsHeading = computed(() => appStore.projectsHeading)
+const projectsDescription = computed(() => appStore.projectsDescription)
+const projects = computed(() => appStore.projects)
+
 </script>
 
 <template>
@@ -52,12 +25,12 @@ export default {
           text-ternary-dark
           dark:text-ternary-light
         ">
-        {{ 'projectsHeading' }}
+        {{ projectsHeading }}
       </p>
       <!-- Note: This description is commented out, but if you want to see it, just uncomment this -->
-      <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
+      <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
         {{ projectsDescription }}
-      </p> -->
+      </p>
     </div>
 
     <!-- Filter and search projects -->
@@ -117,7 +90,7 @@ export default {
 
     <!-- Projects grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-      <div v-for="project in filteredProjects" :key="project.id" class="
+      <div v-for="project in projects" :key="project.id" class="
           rounded-xl
           shadow-lg
           hover:shadow-xl

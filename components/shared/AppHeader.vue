@@ -1,8 +1,10 @@
 <script>
-// import { mapState } from "vuex";
 import HireMeModal from "../HireMeModal.vue";
 import AppNavigation from "./AppNavigation.vue";
+import { mapStores, defineStore } from 'pinia'
 
+// given two stores with the following ids
+const appStore = defineStore('appStore', {})
 export default {
   components: {
     HireMeModal,
@@ -15,9 +17,12 @@ export default {
     };
   },
 
-  // computed: {
-  //   ...mapState(["categories"]),
-  // },
+  computed: {
+    categories() {
+      return this.appStore.categories
+    },
+    ...mapStores(appStore)
+  },
   methods: {
     themeSwitcher() {
 

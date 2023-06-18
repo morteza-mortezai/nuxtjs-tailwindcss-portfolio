@@ -1,5 +1,9 @@
 <script>
-// import { mapState } from "vuex";
+import { useAppStore } from "@/store/index";
+import { mapStores, defineStore } from 'pinia'
+
+// given two stores with the following ids
+const appStore = defineStore('appStore', {})
 
 export default {
   data: () => {
@@ -8,9 +12,12 @@ export default {
       author: "Stoman",
     };
   },
-  // computed: {
-  //   ...mapState(["copyrightDate"]),
-  // },
+  computed: {
+    copyrightDate() {
+      this.appStore.copyrightDate
+    },
+    ...mapStores(appStore)
+  },
 };
 </script>
 

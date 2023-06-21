@@ -1,24 +1,19 @@
-<script>
-// import { mapState } from "vuex";
+<script setup>
+import { ref, computed, onMounted, onUpdated } from 'vue'
 import feather from "feather-icons";
 import FooterCopyright from "./FooterCopyright.vue";
-export default {
-  components: { FooterCopyright },
-  data: () => {
-    return {
-      // Todo
-    };
-  },
-  // computed: {
-  //   ...mapState(["copyrightDate", "socialProfiles"]),
-  // },
-  mounted() {
-    feather.replace();
-  },
-  updated() {
-    feather.replace();
-  },
-};
+import { useAppStore } from '@/store/index'
+const appStore = useAppStore()
+
+const socialProfiles = computed(() => appStore.socialProfiles)
+onMounted(() => {
+  feather.replace();
+})
+onUpdated(() => {
+  feather.replace();
+
+})
+
 </script>
 
 <template>

@@ -1,26 +1,20 @@
-<script>
+<script setup>
+import { computed, onMounted, onUpdated } from 'vue'
+import { useRoute } from 'vue-router'
 import feather from "feather-icons";
 import ProjectRelatedProjects from "../../components/projects/ProjectRelatedProjects.vue";
-export default {
-  scrollToTop: true,
-  data: () => {
-    return {
-      // @todo
-    };
-  },
-  computed: {
-    project() {
-      return this.$store.getters.getProjectById(this.$route.params.id);
-    },
-  },
-  mounted() {
-    feather.replace();
-  },
-  updated() {
-    feather.replace();
-  },
-  components: { ProjectRelatedProjects },
-};
+import { useAppStore } from '@/store/index'
+const appStore = useAppStore()
+const route = useRoute()
+const project = computed(() => appStore.getProjectById(route.params.id))
+
+onMounted(() => {
+  feather.replace();
+})
+onUpdated(() => {
+  feather.replace();
+})
+
 </script>
 
 <template>
@@ -29,8 +23,7 @@ export default {
     <div v-if="project">
       <!-- Project heading and meta info -->
       <div>
-        <p
-          class="
+        <p class="
             font-general-medium
             text-left text-3xl
             sm:text-4xl
@@ -40,57 +33,37 @@ export default {
             mt-14
             sm:mt-20
             mb-7
-          "
-        >
+          ">
           {{ project.title }}
         </p>
         <div class="flex">
           <div class="flex items-center mr-10">
-            <i
-              data-feather="clock"
-              class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
-            ></i>
-            <span
-              class="
+            <i data-feather="clock" class="w-4 h-4 text-ternary-dark dark:text-ternary-light"></i>
+            <span class="
                 font-general-medium
                 ml-2
                 leading-none
                 text-primary-dark
                 dark:text-primary-light
-              "
-              >{{ project.publishDate }}</span
-            >
+              ">{{ project.publishDate }}</span>
           </div>
           <div class="flex items-center">
-            <i
-              data-feather="tag"
-              class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
-            ></i>
-            <span
-              class="
+            <i data-feather="tag" class="w-4 h-4 text-ternary-dark dark:text-ternary-light"></i>
+            <span class="
                 font-general-medium
                 ml-2
                 leading-none
                 text-primary-dark
                 dark:text-primary-light
-              "
-              >{{ project.tag }}</span
-            >
+              ">{{ project.tag }}</span>
           </div>
         </div>
       </div>
 
       <!-- Project gallery -->
       <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-        <div
-          class="mb-10 sm:mb-0"
-          v-for="projectImage in project.projectImages"
-          :key="projectImage.id"
-        >
-          <img
-            :src="projectImage.img"
-            class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-          />
+        <div class="mb-10 sm:mb-0" v-for="projectImage in project.projectImages" :key="projectImage.id">
+          <img :src="projectImage.img" class="rounded-xl cursor-pointer shadow-lg sm:shadow-none" />
         </div>
       </div>
 
@@ -100,107 +73,80 @@ export default {
         <div class="w-full sm:w-1/3 text-left">
           <!-- Single project client details -->
           <div class="mb-7">
-            <p
-              class="
+            <p class="
                 font-general-medium
                 text-2xl text-secondary-dark
                 dark:text-secondary-light
                 mb-2
-              "
-            >
+              ">
               {{ project.clientTitle }}
             </p>
             <ul class="leading-loose">
-              <li
-                v-for="info in project.companyInfos"
-                :key="info.id"
-                class="
+              <li v-for="info in project.companyInfos" :key="info.id" class="
                   font-general-regular
                   text-ternary-dark
                   dark:text-ternary-light
-                "
-              >
+                ">
                 <span>{{ info.title }}: </span>
-                <a
-                  href="#"
-                  :class="
-                    info.title == 'Website' || info.title == 'Phone'
-                      ? 'hover:underline cursor-pointer'
-                      : ''
-                  "
-                  aria-label="Project website and phone"
-                  >{{ info.details }}</a
-                >
+                <a href="#" :class="info.title == 'Website' || info.title == 'Phone'
+                  ? 'hover:underline cursor-pointer'
+                  : ''
+                  " aria-label="Project website and phone">{{ info.details }}</a>
               </li>
             </ul>
           </div>
 
           <!-- Single project objectives -->
           <div class="mb-7">
-            <p
-              class="
+            <p class="
                 font-general-medium
                 text-2xl text-ternary-dark
                 dark:text-ternary-light
                 mb-2
-              "
-            >
+              ">
               {{ project.objectivesTitle }}
             </p>
-            <p
-              class="
+            <p class="
                 font-general-regular
                 text-primary-dark
                 dark:text-ternary-light
-              "
-            >
+              ">
               {{ project.objectivesDetails }}
             </p>
           </div>
 
           <!-- Single project technologies -->
           <div class="mb-7">
-            <p
-              class="
+            <p class="
                 font-general-medium
                 text-2xl text-ternary-dark
                 dark:text-ternary-light
                 mb-2
-              "
-            >
+              ">
               {{ project.techTitle }}
             </p>
-            <p
-              class="
+            <p class="
                 font-general-regular
                 text-primary-dark
                 dark:text-ternary-light
-              "
-            >
+              ">
               {{ project.technologies.join(", ") }}
             </p>
           </div>
 
           <!-- Single project social sharing -->
           <div>
-            <p
-              class="
+            <p class="
                 font-general-medium
                 text-2xl text-ternary-dark
                 dark:text-ternary-light
                 mb-2
-              "
-            >
+              ">
               {{ project.socialTitle }}
             </p>
             <div class="flex items-center gap-3 mt-5">
-              <a
-                v-for="social in project.socialSharings"
-                :key="social.id"
-                :href="social.url"
-                target="__blank"
-                aria-label="Share Project"
-                class="
+              <a v-for="social in project.socialSharings" :key="social.id" :href="social.url" target="__blank"
+                aria-label="Share Project" class="
                   bg-ternary-light
                   dark:bg-ternary-dark
                   text-gray-400
@@ -210,40 +156,29 @@ export default {
                   rounded-lg
                   shadow-sm
                   duration-500
-                "
-                ><i
-                  :data-feather="social.icon"
-                  class="w-4 lg:w-5 h-4 lg:h-5"
-                ></i
-              ></a>
+                "><i :data-feather="social.icon" class="w-4 lg:w-5 h-4 lg:h-5"></i></a>
             </div>
           </div>
         </div>
 
         <!-- Single project right section details -->
         <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-          <p
-            class="
+          <p class="
               font-general-medium
               text-primary-dark
               dark:text-primary-light
               text-2xl
               font-bold
               mb-7
-            "
-          >
+            ">
             {{ project.detailsTitle }}
           </p>
-          <p
-            v-for="projectDetail in project.projectDetails"
-            :key="projectDetail.id"
-            class="
+          <p v-for="projectDetail in project.projectDetails" :key="projectDetail.id" class="
               font-general-regular
               mb-5
               text-lg text-ternary-dark
               dark:text-ternary-light
-            "
-          >
+            ">
             {{ projectDetail.details }}
           </p>
         </div>

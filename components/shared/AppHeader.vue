@@ -1,49 +1,33 @@
-<script>
+<script setup>
+import { ref, computed } from 'vue'
 import HireMeModal from "../HireMeModal.vue";
 import AppNavigation from "./AppNavigation.vue";
-import { mapStores, defineStore } from 'pinia'
-
+import { useAppStore } from '@/store/index'
 // given two stores with the following ids
-const appStore = defineStore('appStore', {})
-export default {
-  components: {
-    HireMeModal,
-    AppNavigation,
-  },
-  data: () => {
-    return {
-      isOpen: false,
-      modal: false,
-    };
-  },
+const appStore = useAppStore()
 
-  computed: {
-    categories() {
-      return this.appStore.categories
-    },
-    ...mapStores(appStore)
-  },
-  methods: {
-    themeSwitcher() {
+const isOpen = ref(false)
 
-      this.$colorMode.value == "light"
-    },
-    showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName("html")[0]
-          .classList.remove("overflow-y-hidden");
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName("html")[0]
-          .classList.add("overflow-y-hidden");
-        this.modal = true;
-      }
-    },
-  },
-};
+const modal = ref(false)
+
+const categories = computed(() => appStore.categories)
+
+function showModal() {
+  if (modal.value) {
+    // Stop screen scrolling
+    document
+      .getElementsByTagName("html")[0]
+      .classList.remove("overflow-y-hidden");
+    this.modal = false;
+  } else {
+    document
+      .getElementsByTagName("html")[0]
+      .classList.add("overflow-y-hidden");
+    this.modal = true;
+  }
+}
+
+
 </script>
 
 <template>

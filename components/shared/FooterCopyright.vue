@@ -1,24 +1,18 @@
-<script>
-import { useAppStore } from "@/store/index";
-import { mapStores, defineStore } from 'pinia'
+<script setup>
+import { ref, computed } from 'vue'
 
+import { useAppStore } from '@/store/index'
 // given two stores with the following ids
-const appStore = defineStore('appStore', {})
+const appStore = useAppStore()
 
-export default {
-  data: () => {
-    return {
-      projectName: "Nuxt.js & Tailwind CSS Portfolio",
-      author: "Stoman",
-    };
-  },
-  computed: {
-    copyrightDate() {
-      this.appStore.copyrightDate
-    },
-    ...mapStores(appStore)
-  },
-};
+const projectName = "Nuxt.js & Tailwind CSS Portfolio"
+const author = "Stoman"
+
+
+const copyrightDate = computed(() => appStore.copyrightDate)
+
+
+
 </script>
 
 <template>

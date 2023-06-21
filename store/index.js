@@ -327,7 +327,7 @@ export const useAppStore = defineStore('appStore', () => {
       name: "Branding & Animations",
     }
   ]
-  const getProjectById = computed((id) => projects.find((project) => project.id == id))
+  const getProjectById = computed((id) => projects.value.find((project) => project.id == id))
 
   return { projectsHeading, projectsDescription, projects, clientsHeading, clients, aboutMe, copyrightDate, socialProfiles, categories, getProjectById }
 })

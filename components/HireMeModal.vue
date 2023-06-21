@@ -1,60 +1,46 @@
-<script>
+<script setup>
+import { defineProps, onMounted } from 'vue'
 import feather from "feather-icons";
 import Button from "./reusable/Button.vue";
-export default {
-  props: ["showModal", "modal", "categories"],
-  components: { Button },
-  data: () => {
-    return {
-      // @todo
-    };
-  },
-  mounted() {
-    feather.replace();
-  },
-  methods: {},
-};
+const props = defineProps(["showModal", "modal", "categories"])
+
+onMounted(() => {
+  feather.replace();
+}) 
 </script>
 
 <template>
   <transition name="fade">
     <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
       <!-- Modal body background as backdrop -->
-      <div
-        v-show="modal"
-        @click="showModal()"
-        class="
+      <div v-show="modal" @click="showModal()" class="
           bg-filter bg-black bg-opacity-50
           fixed
           inset-0
           w-full
           h-full
           z-20
-        "
-      ></div>
+        "></div>
       <!-- Modal contents -->
       <main class="flex flex-col items-center justify-center h-full w-full">
         <transition name="fade-up-down">
           <div v-show="modal" class="modal-wrapper flex items-center z-30">
-            <div
-              class="
+            <div class="
                 modal
                 max-w-md
                 mx-5
                 xl:max-w-xl
                 lg:max-w-xl
                 md:max-w-xl
-                bg-secondary-light
+                bg-red-100
                 dark:bg-primary-dark
                 max-h-screen
                 shadow-lg
                 flex-row
                 rounded-lg
                 relative
-              "
-            >
-              <div
-                class="
+              ">
+              <div class="
                   modal-header
                   flex
                   justify-between
@@ -62,30 +48,21 @@ export default {
                   p-5
                   border-b border-ternary-light
                   dark:border-ternary-dark
-                "
-              >
+                ">
                 <h5 class="text-primary-dark dark:text-primary-light text-xl">
                   What project are you looking for?
                 </h5>
-                <button
-                  class="px-4 text-primary-dark dark:text-primary-light"
-                  @click="showModal()"
-                >
+                <button class="px-4 text-primary-dark dark:text-primary-light" @click="showModal()">
                   <i data-feather="x" class="w-8 sm:w-12"></i>
                 </button>
               </div>
               <div class="modal-body p-5 w-full h-full">
-                <form
-                  @submit="
-                    (e) => {
-                      e.preventDefault;
-                    }
-                  "
-                  class="max-w-xl m-4 text-left"
-                >
+                <form @submit="(e) => {
+                  e.preventDefault;
+                }
+                  " class="max-w-xl m-4 text-left">
                   <div class="mt-0">
-                    <input
-                      class="
+                    <input class="
                         w-full
                         px-5
                         py-2
@@ -97,18 +74,10 @@ export default {
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      "
-                      id="name"
-                      name="name"
-                      type="text"
-                      required=""
-                      placeholder="Name"
-                      aria-label="Name"
-                    />
+                      " id="name" name="name" type="text" required="" placeholder="Name" aria-label="Name" />
                   </div>
                   <div class="mt-6">
-                    <input
-                      class="
+                    <input class="
                         w-full
                         px-5
                         py-2
@@ -120,18 +89,10 @@ export default {
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      "
-                      id="email"
-                      name="email"
-                      type="text"
-                      required=""
-                      placeholder="Email"
-                      aria-label="Email"
-                    />
+                      " id="email" name="email" type="text" required="" placeholder="Email" aria-label="Email" />
                   </div>
                   <div class="mt-6">
-                    <select
-                      class="
+                    <select class="
                         w-full
                         px-5
                         py-2
@@ -143,26 +104,15 @@ export default {
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      "
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      required=""
-                      aria-label="Project Category"
-                    >
-                      <option
-                        v-for="category in categories"
-                        :key="category.id"
-                        :value="category.value"
-                      >
+                      " id="subject" name="subject" type="text" required="" aria-label="Project Category">
+                      <option v-for="category in categories" :key="category.id" :value="category.value">
                         {{ category.name }}
                       </option>
                     </select>
                   </div>
 
                   <div class="mt-6">
-                    <textarea
-                      class="
+                    <textarea class="
                         w-full
                         px-5
                         py-2
@@ -174,20 +124,12 @@ export default {
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      "
-                      id="message"
-                      name="message"
-                      cols="14"
-                      rows="6"
-                      aria-label="Details"
-                      placeholder="Project description"
-                    ></textarea>
+                      " id="message" name="message" cols="14" rows="6" aria-label="Details"
+                      placeholder="Project description"></textarea>
                   </div>
 
                   <div class="mt-6 pb-4 sm:pb-1">
-                    <Button
-                      title="Send Request"
-                      class="
+                    <Button title="Send Request" class="
                         px-4
                         sm:px-6
                         py-2
@@ -198,19 +140,12 @@ export default {
                         rounded-md
                         focus:ring-1 focus:ring-indigo-900
                         duration-500
-                      "
-                      type="submit"
-                      aria-label="Submit Request"
-                    />
+                      " type="submit" aria-label="Submit Request" />
                   </div>
                 </form>
               </div>
-              <div
-                class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-              >
-                <Button
-                  title="Close"
-                  class="
+              <div class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
+                <Button title="Close" class="
                     px-4
                     sm:px-6
                     py-2
@@ -223,10 +158,7 @@ export default {
                     rounded-md
                     focus:ring-1 focus:ring-indigo-900
                     duration-500
-                  "
-                  @click="showModal()"
-                  aria-label="Close Hire Me Modal"
-                />
+                  " @click="showModal()" aria-label="Close Hire Me Modal" />
               </div>
             </div>
           </div>

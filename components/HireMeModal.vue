@@ -3,7 +3,23 @@ import { defineProps, onMounted } from 'vue'
 import feather from "feather-icons";
 import Button from "./reusable/Button.vue";
 const props = defineProps(["showModal", "modal", "categories"])
-
+const contacts = [
+  {
+    id: 1,
+    name: "Arak, Iran",
+    icon: "map-pin",
+  },
+  {
+    id: 2,
+    name: "mrtz.mrtzi.1989@gmail.com",
+    icon: "mail",
+  },
+  {
+    id: 3,
+    name: "+(98) 936 2532 122",
+    icon: "phone",
+  },
+]
 onMounted(() => {
   feather.replace();
 }) 
@@ -25,7 +41,7 @@ onMounted(() => {
       <main class="flex flex-col items-center justify-center h-full w-full">
         <transition name="fade-up-down">
           <div v-show="modal" class="modal-wrapper flex items-center z-30">
-            <div class="
+            <div v-if="0" class="
                 modal
                 max-w-md
                 mx-5
@@ -159,6 +175,48 @@ onMounted(() => {
                     focus:ring-1 focus:ring-indigo-900
                     duration-500
                   " @click="showModal()" aria-label="Close Hire Me Modal" />
+              </div>
+            </div>
+            <div>
+              <div class="modal
+              px-5
+              py-1
+                max-w-md
+                mx-5
+                xl:max-w-xl
+                lg:max-w-xl
+                md:max-w-xl
+                bg-white
+                dark:bg-primary-dark
+                max-h-screen
+                shadow-lg
+                flex-row
+                rounded-lg
+                relative">
+                <div class="
+                  modal-header
+                  flex
+                  justify-between
+                  gap-10
+                  p-5
+                  border-b border-ternary-light
+                  dark:border-ternary-dark
+                ">
+                  <h5 class="text-primary-dark dark:text-primary-light text-xl">
+                    Contact me
+                  </h5>
+                </div>
+                <ul class="font-general-regular mt-3">
+                  <li class="flex" v-for="contact in contacts" :key="contact.id">
+                    <i :data-feather="contact.icon" class="w-5 text-gray-500 dark:text-gray-400 mr-4"></i>
+                    <a href="#" class="text-lg mb-4 text-ternary-dark dark:text-ternary-light" :class="contact.icon === 'mail' || contact.icon === 'phone'
+                      ? 'hover:underline cursor-pointer'
+                      : ''
+                      " aria-label="Website and Phone">
+                      {{ contact.name }}
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

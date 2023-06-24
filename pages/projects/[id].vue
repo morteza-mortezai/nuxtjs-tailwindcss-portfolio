@@ -106,13 +106,13 @@ onUpdated(() => {
               ">
               {{ project.objectivesTitle }}
             </p>
-            <p class="
+            <a :href="project.objectivesDetails" target="_blank" class="
                 font-general-regular
                 text-primary-dark
                 dark:text-ternary-light
               ">
               {{ project.objectivesDetails }}
-            </p>
+            </a>
           </div>
 
           <!-- Single project technologies -->

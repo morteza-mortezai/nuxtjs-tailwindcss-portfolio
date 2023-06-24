@@ -4,120 +4,104 @@ export const useAppStore = defineStore('appStore', () => {
   const projectsHeading = "Projects Portfolio"
   const projectsDescription = "Some of the projects I have successfully completed"
   const projects = ref([
-    // {
-    //   id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
-    //   title: "Google Health Platform",
-    //   category: "Web Application",
-    //   img: "images/web-project-2.jpg",
-    //   publishDate: "Nov 04, 2021",
-    //   tag: "UI / Frontend",
-    //   clientTitle: "About Client",
-    //   objectivesTitle: "Objective",
-    //   objectivesDetails:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-    //   techTitle: "Tools & Technologies",
-    //   detailsTitle: "Challenge",
-    //   socialTitle: "Share This",
-    //   projectImages: [
-    //     {
-    //       id: uuidv4(),
-    //       title: "Uber Project Management UI",
-    //       img: "../images/ui-project-1.jpg",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       title: "Uber Project Management UI",
-    //       img: "../images/web-project-1.jpg",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       title: "Uber Project Management UI",
-    //       img: "../images/web-project-2.jpg",
-    //     },
-    //   ],
-    //   companyInfos: [
-    //     {
-    //       id: uuidv4(),
-    //       title: "Name",
-    //       details: "Company Ltd",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       title: "Services",
-    //       details: "UI Design & Frontend Development",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       title: "Website",
-    //       details: "https://company.com",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       title: "Phone",
-    //       details: "555 8888 888",
-    //     },
-    //   ],
-    //   technologies: [
-    //     "HTML",
-    //     "CSS",
-    //     "JavaScript",
-    //     "Nuxt.js",
-    //     "TailwindCSS",
-    //     "AdobeXD",
-    //   ],
-    //   projectDetails: [
-    //     {
-    //       id: uuidv4(),
-    //       details:
-    //         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       details:
-    //         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       details:
-    //         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       details:
-    //         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-    //     },
-    //   ],
-    //   socialSharings: [
-    //     {
-    //       id: uuidv4(),
-    //       name: "Twitter",
-    //       icon: "twitter",
-    //       url: "https://twitter.com/realstoman",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       name: "LinkedIn",
-    //       icon: "linkedin",
-    //       url: "https://linkedin.com/in/realstoman",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       name: "Facebook",
-    //       icon: "facebook",
-    //       url: "https://facebook.com",
-    //     },
-    //     {
-    //       id: uuidv4(),
-    //       name: "Instagram",
-    //       icon: "instagram",
-    //       url: "https://instagram.com",
-    //     },
-    //   ],
-    // },
+    {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
+      title: "Ariadezh",
+      category: "Web Application",
+      img: "images/projects/ariadezh/2.png",
+      publishDate: "Jun 14, 2023",
+      tag: "UI / Frontend",
+      clientTitle: "About Client",
+      objectivesTitle: "demo",
+      objectivesDetails:
+        "https://youtu.be/lHSBS0C8WJY",
+      techTitle: "Tools & Technologies",
+      detailsTitle: "Challenge",
+      // socialTitle: "Share This",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Uber Project Management UI",
+          img: "../images/projects/ariadezh/1.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Uber Project Management UI",
+          img: "../images/projects/ariadezh/2.png",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Name",
+          details: "Dezhafzarnet Ltd",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "Firewall and security softwares",
+        },
+        {
+          id: uuidv4(),
+          title: "Website",
+          details: "https://dezhafzar.com",
+        },
+      ],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vue.js 3",
+        "Figma",
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details:
+            "This project was a legacy php project "
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Login page and menu redesigned and refactored"
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Also it converted to be like SPA ."
+        },
+      ],
+      // socialSharings: [
+      //   {
+      //     id: uuidv4(),
+      //     name: "Twitter",
+      //     icon: "twitter",
+      //     url: "https://twitter.com/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "LinkedIn",
+      //     icon: "linkedin",
+      //     url: "https://linkedin.com/in/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Facebook",
+      //     icon: "facebook",
+      //     url: "https://facebook.com",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Instagram",
+      //     icon: "instagram",
+      //     url: "https://instagram.com",
+      //   },
+      // ],
+    },
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdc",
-      title: "Peda Ltd",
-      category: "Export Trading Company",
+      title: "Peda",
+      category: "Web Application and PWA",
       img: "images/projects/peda/1.png",
       publishDate: "Nov 04, 2021",
       tag: "UI / Frontend",
@@ -127,12 +111,12 @@ export const useAppStore = defineStore('appStore', () => {
       //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
       techTitle: "Tools & Technologies",
       detailsTitle: "Challenge",
-      socialTitle: "Share This",
+      // socialTitle: "Share This",
       projectImages: [
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/peda/4.png",
+          img: "../images/projects/peda/1.png",
         },
         {
           id: uuidv4(),
@@ -143,6 +127,11 @@ export const useAppStore = defineStore('appStore', () => {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
           img: "../images/projects/peda/3.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/peda/4.png",
         },
       ],
       companyInfos: [
@@ -185,35 +174,234 @@ export const useAppStore = defineStore('appStore', () => {
             "Strapi is used for backend"
         }
       ],
-      socialSharings: [
+      // socialSharings: [
+      //   {
+      //     id: uuidv4(),
+      //     name: "Twitter",
+      //     icon: "twitter",
+      //     url: "https://twitter.com/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "LinkedIn",
+      //     icon: "linkedin",
+      //     url: "https://linkedin.com/in/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Facebook",
+      //     icon: "facebook",
+      //     url: "https://facebook.com",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Instagram",
+      //     icon: "instagram",
+      //     url: "https://instagram.com",
+      //   },
+      // ],
+    },
+    {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccde",
+      title: "Keyvan",
+      category: "Web Application",
+      img: "images/projects/keyvan/4.png",
+      publishDate: "Dec 04, 2022",
+      tag: "UI / Frontend",
+      clientTitle: "About Client",
+      objectivesTitle: "demo",
+      objectivesDetails:
+        "https://youtu.be/HcLSjz1kaK8",
+      techTitle: "Security & Technologies",
+      detailsTitle: "Challenge",
+      // socialTitle: "Share This",
+      projectImages: [
         {
           id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/keyvan/3.png",
         },
         {
           id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/in/realstoman",
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/keyvan/4.png",
         },
         {
           id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com",
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/keyvan/5.png",
         },
         {
           id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com",
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/keyvan/6.png",
         },
       ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Name",
+          details: "Dezhafzarnet Ltd",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "Security Software and Firewall ",
+        },
+        // {
+        //   id: uuidv4(),
+        //   title: "Website",
+        //   details: "https://pedaint.com",
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Phone",
+        //   details: "xxx xxxx xxx",
+        // },
+      ],
+      technologies: [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "Vue.js 3",
+        "Element-plus UI",
+        "Figma",
+        "RestApi",
+        "Highchart",
+      ],
+      // projectDetails: [
+      //   {
+      //     id: uuidv4(),
+      //     details:
+      //       "Strapi is used for backend"
+      //   }
+      // ],
+      // socialSharings: [
+      //   {
+      //     id: uuidv4(),
+      //     name: "Twitter",
+      //     icon: "twitter",
+      //     url: "https://twitter.com/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "LinkedIn",
+      //     icon: "linkedin",
+      //     url: "https://linkedin.com/in/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Facebook",
+      //     icon: "facebook",
+      //     url: "https://facebook.com",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Instagram",
+      //     icon: "instagram",
+      //     url: "https://instagram.com",
+      //   },
+      // ],
+    },
+    {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdf",
+      title: "Avayab",
+      category: "Web Application",
+      img: "images/projects/avayab/7.png",
+      publishDate: "Jun 15, 2022",
+      tag: "UI / Frontend",
+      clientTitle: "About Client",
+      objectivesTitle: "demo",
+      objectivesDetails:
+        "https://youtu.be/doGCKHJXkUk",
+      techTitle: "Security & Technologies",
+      detailsTitle: "Challenge",
+      // socialTitle: "Share This",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/avayab/7.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/avayab/8.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Phoenix Digital Agency",
+          img: "../images/projects/avayab/9.png",
+        },
+
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Name",
+          details: "Dezhafzarnet Ltd",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "Security Software and Firewall ",
+        },
+        // {
+        //   id: uuidv4(),
+        //   title: "Website",
+        //   details: "https://pedaint.com",
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Phone",
+        //   details: "xxx xxxx xxx",
+        // },
+      ],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Nuxt.js",
+        "Bootstrap-vue",
+        "Figma",
+        "RestApi",
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details:
+            "This project include Landing page and panel."
+        }
+      ],
+      // socialSharings: [
+      //   {
+      //     id: uuidv4(),
+      //     name: "Twitter",
+      //     icon: "twitter",
+      //     url: "https://twitter.com/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "LinkedIn",
+      //     icon: "linkedin",
+      //     url: "https://linkedin.com/in/realstoman",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Facebook",
+      //     icon: "facebook",
+      //     url: "https://facebook.com",
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     name: "Instagram",
+      //     icon: "instagram",
+      //     url: "https://instagram.com",
+      //   },
+      // ],
     },
   ])
-  const clientsHeading = "Some of the Projects I done"
+  const clientsHeading = "Some of the Projects I've done"
   const clients = [
     {
       id: uuidv4(),
@@ -272,25 +460,25 @@ export const useAppStore = defineStore('appStore', () => {
       id: uuidv4(),
       name: "GitHub",
       icon: "github",
-      url: "https://github.com/realstoman",
+      url: "https://github.com/morteza-mortezai",
     },
-    {
-      id: uuidv4(),
-      name: "Twitter",
-      icon: "twitter",
-      url: "https://twitter.com/realstoman",
-    },
+    // {
+    //   id: uuidv4(),
+    //   name: "Twitter",
+    //   icon: "twitter",
+    //   url: "https://twitter.com/morteza-mortezai",
+    // },
     {
       id: uuidv4(),
       name: "Linkedin",
       icon: "linkedin",
-      url: "https://linkedin.com/in/realstoman",
+      url: "https://linkedin.com/in/s-mrtz-mrtzi",
     },
     {
       id: uuidv4(),
       name: "Youtube",
       icon: "youtube",
-      url: "https://youtube.com/c/realstoman",
+      url: "https://youtube.com/c/mrtzmrtzi524",
     },
   ]
   const categories = [
@@ -301,19 +489,9 @@ export const useAppStore = defineStore('appStore', () => {
     },
     {
       id: uuidv4(),
-      value: "mobile",
-      name: "Mobile Applicaiton",
+      value: "api",
+      name: "Web Service",
     },
-    {
-      id: uuidv4(),
-      value: "ui-ux",
-      name: "UI/UX Design",
-    },
-    {
-      id: uuidv4(),
-      value: "branding",
-      name: "Branding & Animations",
-    }
   ]
   function getProjectById(id) {
     return projects.value.find((project) => project.id == id)

@@ -8,17 +8,17 @@ export default {
       contacts: [
         {
           id: 1,
-          name: "Your Address, Your City, Your Country",
+          name: "Arak, Iran",
           icon: "map-pin",
         },
         {
           id: 2,
-          name: "email@domain.com",
+          name: "mrtz.mrtzi.1989@gmail.com",
           icon: "mail",
         },
         {
           id: 3,
-          name: "555 8888 888",
+          name: "+(98) 936 2532 122",
           icon: "phone",
         },
       ],
@@ -34,14 +34,12 @@ export default {
 </script>
 
 <template>
-  <div
-    class="
+  <div class="
       container
       mx-auto
       flex flex-col-reverse
       md:flex-row md:py-10 md:mt-20
-    "
-  >
+    ">
     <!-- Contact form -->
     <ContactForm />
 

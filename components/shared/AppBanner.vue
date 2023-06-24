@@ -55,7 +55,7 @@ export default {
         A Full-Stack JavaScript Developer
       </p>
       <div class="flex justify-center sm:block">
-        <a href="/Stoman-Resume.pdf" download="" class="
+        <a href="/mortezaie-full-stack.pdf" download="" class="
             flex
             justify-center
             items-center

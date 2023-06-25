@@ -53,7 +53,7 @@ function showModal() {
         </div>
 
         <!-- Theme switcher small screen -->
-        <button @click="themeSwitcher" class="
+        <button v-if="0" @click="themeSwitcher" class="
             sm:hidden
             ml-8
             bg-primary-light
@@ -103,7 +103,7 @@ function showModal() {
       <!-- Header right section buttons -->
       <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
         <!-- Hire me button -->
-        <div class="font-general-medium hidden md:block">
+        <div v-if="0" class="font-general-medium hidden md:block">
           <button class="
               text-md
               bg-indigo-500
@@ -119,7 +119,7 @@ function showModal() {
         </div>
 
         <!-- Theme switcher large screen -->
-        <button @click="themeSwitcher" class="
+        <button v-if="0" @click="themeSwitcher" class="
             sm:ml-6
             bg-primary-light
             dark:bg-ternary-dark

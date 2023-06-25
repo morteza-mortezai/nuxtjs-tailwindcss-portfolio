@@ -28,7 +28,7 @@ export default {
         sm:mx-4
         mb-2
         sm:py-2
-        border-t-2
+        
         pt-3
         sm:pt-2 sm:border-t-0
         border-primary-light
@@ -54,7 +54,7 @@ export default {
         sm:mx-4
         mb-2
         sm:py-2
-        border-t-2
+        
         pt-3
         sm:pt-2 sm:border-t-0
         border-primary-light
@@ -62,13 +62,13 @@ export default {
       " aria-label="Contact">Contact</NuxtLink>
     <div class="
         font-general-regular
-        border-t-2
+        
         pt-3
         sm:pt-0 sm:border-t-0
         border-primary-light
         dark:border-secondary-dark
       ">
-      <button class="
+      <button v-if="0" class="
           sm:hidden
           block
           text-left text-md

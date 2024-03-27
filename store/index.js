@@ -8,7 +8,7 @@ export const useAppStore = defineStore('appStore', () => {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
       title: "Ariadezh",
       category: "Web Application",
-      img: "images/projects/ariadezh/2.png",
+      img: "images/projects/ariadezh/2.PNG",
       publishDate: "Jun 14, 2023",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -22,12 +22,12 @@ export const useAppStore = defineStore('appStore', () => {
         {
           id: uuidv4(),
           title: "Uber Project Management UI",
-          img: "../images/projects/ariadezh/1.png",
+          img: "../images/projects/ariadezh/1.PNG",
         },
         {
           id: uuidv4(),
           title: "Uber Project Management UI",
-          img: "../images/projects/ariadezh/2.png",
+          img: "../images/projects/ariadezh/2.PNG",
         },
       ],
       companyInfos: [
@@ -102,7 +102,7 @@ export const useAppStore = defineStore('appStore', () => {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdc",
       title: "Peda",
       category: "Web Application and PWA",
-      img: "images/projects/peda/1.png",
+      img: "images/projects/peda/1.PNG",
       publishDate: "Nov 04, 2021",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -116,22 +116,22 @@ export const useAppStore = defineStore('appStore', () => {
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/peda/1.png",
+          img: "../images/projects/peda/1.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/peda/2.png",
+          img: "../images/projects/peda/2.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/peda/3.png",
+          img: "../images/projects/peda/3.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/peda/4.png",
+          img: "../images/projects/peda/4.PNG",
         },
       ],
       companyInfos: [
@@ -205,7 +205,7 @@ export const useAppStore = defineStore('appStore', () => {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccde",
       title: "Keyvan",
       category: "Web Application",
-      img: "images/projects/keyvan/4.png",
+      img: "images/projects/keyvan/4.PNG",
       publishDate: "Dec 04, 2022",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -219,22 +219,22 @@ export const useAppStore = defineStore('appStore', () => {
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/keyvan/3.png",
+          img: "../images/projects/keyvan/3.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/keyvan/4.png",
+          img: "../images/projects/keyvan/4.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/keyvan/5.png",
+          img: "../images/projects/keyvan/5.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/keyvan/6.png",
+          img: "../images/projects/keyvan/6.PNG",
         },
       ],
       companyInfos: [
@@ -307,7 +307,7 @@ export const useAppStore = defineStore('appStore', () => {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdf",
       title: "Avayab",
       category: "Web Application",
-      img: "images/projects/avayab/7.png",
+      img: "images/projects/avayab/7.PNG",
       publishDate: "Jun 15, 2022",
       tag: "UI / Frontend",
       clientTitle: "About Client",
@@ -321,17 +321,17 @@ export const useAppStore = defineStore('appStore', () => {
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/avayab/7.png",
+          img: "../images/projects/avayab/7.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/avayab/8.png",
+          img: "../images/projects/avayab/8.PNG",
         },
         {
           id: uuidv4(),
           title: "Phoenix Digital Agency",
-          img: "../images/projects/avayab/9.png",
+          img: "../images/projects/avayab/9.PNG",
         },
 
       ],
@@ -406,42 +406,42 @@ export const useAppStore = defineStore('appStore', () => {
     {
       id: uuidv4(),
       title: "Amazon",
-      img: "../brands/amazon_gray.png",
+      img: "../brands/amazon_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "Sony",
-      img: "../brands/sony_gray.png",
+      img: "../brands/sony_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "Adidas",
-      img: "../brands/adidas_gray.png",
+      img: "../brands/adidas_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "FILA",
-      img: "../brands/fila_gray.png",
+      img: "../brands/fila_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "NB",
-      img: "../brands/nb_gray.png",
+      img: "../brands/nb_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "SAMSUNG",
-      img: "../brands/samsung_gray.png",
+      img: "../brands/samsung_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "CANON",
-      img: "../brands/canon_gray.png",
+      img: "../brands/canon_gray.PNG",
     },
     {
       id: uuidv4(),
       title: "PUMA",
-      img: "../brands/puma_gray.png",
+      img: "../brands/puma_gray.PNG",
     },
   ]
   const aboutMe = [

@@ -5,17 +5,17 @@ const relatedProject = {
     {
       id: 1,
       title: "Web Application",
-      img: "/images/projects/ariadezh/1.png",
+      img: "/images/projects/ariadezh/1.PNG",
     },
     {
       id: 2,
       title: "Web Application",
-      img: "/images/projects/avayab/7.png",
+      img: "/images/projects/avayab/7.PNG",
     },
     {
       id: 3,
       title: "Web Application",
-      img: "/images/projects/keyvan/3.png",
+      img: "/images/projects/keyvan/3.PNG",
     },
   ],
 }
